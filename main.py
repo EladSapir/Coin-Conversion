@@ -35,3 +35,28 @@ class Shekel(Coin):
         if type(other) == Shekel:
             return self.getQuantity() - other.getQuantity()
 
+class Dollar(Coin):
+    """
+    Dollar class - coin of New Israeli Shekel
+    """
+
+    def amount(self):
+        """
+        converts to New israeli shekel
+        :return: the conversion to NIS
+        """
+        return self.getQuantity() * rates['dollar', 'nis']
+
+    def __str__(self):
+        """
+        converts to Dollar to string
+        :return: format of Shekel
+        """
+        return f'{self.getQuantity()}$'
+
+    def __repr__(self):
+        """
+        function returns a printable representation of Dollar
+        :return: format of printable representation of Dollar
+        """
+        return f'Dollar({self.getQuantity()})'

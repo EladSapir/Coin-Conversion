@@ -87,3 +87,23 @@ class Euro(Coin):
         :return: format of printable representation of Euro
         """
         return f'Euro({self.getQuantity()})'
+
+
+def add(x, y):
+    """
+    add bwtween two coins
+    :param x: first coin
+    :param y: second coin
+    :return: sum of the coins
+    """
+    return x + y
+
+
+def sub(x, y):
+    """
+    sub between two coins
+    :param x: first coin
+    :param y: second coin
+    :return: Subtraction result
+    """
+    return x - y

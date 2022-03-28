@@ -60,3 +60,30 @@ class Dollar(Coin):
         :return: format of printable representation of Dollar
         """
         return f'Dollar({self.getQuantity()})'
+
+class Euro(Coin):
+    """
+    Euro class - coin of New Israeli Shekel
+    """
+
+    def amount(self):
+        """
+        converts to New israeli shekel
+        :return: the conversion to NIS
+        """
+        return self.getQuantity() * rates['euro', 'nis']
+
+    def __str__(self):
+        """
+        converts to Euro to string
+        :return: format of Shekel
+        """
+
+        return f'{self.getQuantity()}ג‚¬'
+
+    def __repr__(self):
+        """
+        function returns a printable representation of Euro
+        :return: format of printable representation of Euro
+        """
+        return f'Euro({self.getQuantity()})'
